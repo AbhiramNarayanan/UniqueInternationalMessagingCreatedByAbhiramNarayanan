@@ -1,0 +1,32 @@
+<!-- america.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to Russia</title>
+  <link rel="stylesheet" href="america.css">
+</head>
+<body>
+  <video id="bg-video" autoplay muted loop>
+    <source src="st_petersburg_russia_-_20254 (Original) (1).mp4" type="video/mp4">
+  </video>
+  <audio id="background-audio" autoplay loop>
+    <source src="russian-folk-kalinka-108671.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="container">
+    <h1>Welcome to Russia</h1>
+    <p class="message-heading">Your message has been reached:</p>
+    <p id="message" class="message"></p>
+  </div>
+
+  <script>
+    window.onload = function() {
+      var typedMessage = localStorage.getItem('typedMessage');
+      var messageElement = document.getElementById('message');
+      messageElement.textContent = typedMessage;
+      messageElement.classList.add('bold');
+    };
+  </script>
+</body>
+</html>

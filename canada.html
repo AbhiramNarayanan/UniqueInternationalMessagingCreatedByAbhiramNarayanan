@@ -1,0 +1,32 @@
+<!-- america.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to Canada</title>
+  <link rel="stylesheet" href="america.css">
+</head>
+<body>
+  <video id="bg-video" autoplay muted loop>
+    <source src="143672 (1080p) (1).mp4" type="video/mp4">
+  </video>
+  <audio id="background-audio" autoplay loop>
+    <source src="beauty-of-nature-vlog-background-music-151643.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="container">
+    <h1>Welcome to Canada</h1>
+    <p class="message-heading">Your message has been reached:</p>
+    <p id="message" class="message"></p>
+  </div>
+
+  <script>
+    window.onload = function() {
+      var typedMessage = localStorage.getItem('typedMessage');
+      var messageElement = document.getElementById('message');
+      messageElement.textContent = typedMessage;
+      messageElement.classList.add('bold');
+    };
+  </script>
+</body>
+</html>
